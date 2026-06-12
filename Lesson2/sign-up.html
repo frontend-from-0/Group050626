@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign up</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <a href="./index.html">Home Page</a>
+        <a href="#">Sign up Page</a>
+      </nav>
+    </header>
+    <main>
+      <h1>Sign up page for Lesson 2</h1>
+      <form method="GET">
+        <div class="input-group">
+          <label for="full_name" class="block-label">Full name</label>
+          <input
+            type="text"
+            id="full_name"
+            placeholder="John Doe"
+            name="full-name"
+            required
+            autocomplete="name"
+            class="full-width"
+          />
+        </div>
+        <div class="input-group">
+          <label for="email" class="block-label">Email</label>
+          <input
+            type="email"
+            id="email"
+            placeholder="john@gmail.com"
+            name="email"
+            required
+            autocomplete="email"
+            class="full-width"
+          />
+        </div>
+
+        <div class="input-group">
+          <label for="prompt" class="block-label accent">Enter your AI Prompt</label>
+          <textarea
+            name="user-prompt"
+            id="prompt"
+            placeholder="e.g. Give me example terminal command that I can use on macOS"
+            required
+            class="full-width"
+          ></textarea>
+        </div>
+
+        <div class="input-group">
+          <label for="model" class="block-label">Choose a Model</label>
+          <select name="selected-model" id="model" class="full-width">
+            <option value="">Select model</option>
+            <option value="gpt-4o">Gpt-4o</option>
+            <option value="claude-3-5">Claude 3.5 Sonnet</option>
+            <option value="llama-3">Llama 3</option>
+          </select>
+        </div>
+
+        <fieldset>
+          <legend>Save settings for future use</legend>
+
+          <label for="option-yes">Yes</label>
+          <input type="radio" id="option-yes" value="yes" name="save-model" />
+
+          <label for="option-no">No</label>
+          <input type="radio" id="option-no" value="no" name="save-model" />
+        </fieldset>
+
+        <div class="input-group">
+          <input type="checkbox" name="terms-accepted" id="terms" required value="true"/>
+          <label for="terms"
+            >To proceed with registration you need to accept terms</label
+          >
+        </div>
+
+        <button type="submit" class="btn-primary">Sign up and get response</button>
+        <button type="reset" class="btn-secondary">Clear from</button>
+        <!-- <input type="submit" value="Sign up and get response"> -->
+      </form>
+    </main>
+  </body>
+</html>

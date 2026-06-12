@@ -1,0 +1,62 @@
+/* External CSS */
+body {
+  margin: 0;
+  background-color: #bfdbfe;
+}
+
+h1 {
+  text-align: center;
+}
+
+form {
+  max-width: 500px;
+  margin: 0 auto;
+  background-color: #dbeafe;
+  padding: 20px;
+  border-radius: 20px;
+  color: #1e3a8a;
+}
+/* Use . in the beginning of the name for class selector */
+.input-group {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+
+.block-label {
+  display: block;
+}
+
+.accent {
+  color: #86198f;
+  font-weight: 800;
+}
+
+.full-width {
+  width: 100%;
+}
+
+button {
+  border: none;
+  padding: 8px 20px;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.btn-primary {
+  background-color: #1e3a8a;
+  color: #eff6ff;
+}
+
+.btn-primary:hover {
+  background-color: #2563eb;
+}
+
+.btn-secondary {
+  background-color: #bfdbfe;
+  color: #1e3a8a;
+}
+
+.btn-secondary:hover {
+  background-color: #eff6ff;
+}
