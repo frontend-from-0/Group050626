@@ -1,0 +1,72 @@
+/* universal selector */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-color: aquamarine;
+  font-size: 1em;
+  text-align: left;
+}
+
+
+.box {
+  background-color: yellow;
+  min-height: 10px;
+  padding: 10px;
+  margin: 10px;
+  font-family: "Roboto", sans-serif;
+  
+  /* border is shorthand property */
+  border: 10px solid red;
+  font-weight: 900;
+  font-size:1.6em;
+  line-height: 150%;
+
+}
+
+
+
+
+main {
+  max-width: 1024px;
+  margin: auto;
+  height: 100vh;
+  background-color: rgba(255, 192, 203);
+
+  /* TODO: margin shorthand */
+
+  /* top right bottom left */
+  /* margin: 10px 20px 30px 40px; */
+/* top  right&lefth bottom */
+  /* margin: 10px 20px 30px; */
+
+  /* top & bottom - rigth & left */
+  /* margin: 10px 20px; */
+}
+
+
+
+
+.content-box {
+  background-color: yellow;
+  height: 10px;
+  padding: 10px;
+  margin: 10px;
+  
+  /* border is shorthand property */
+  border: 10px solid red;
+}
+
+.link {
+  width: 180px;
+  margin: 10px;
+  background-color: yellow;
+  border: 10px solid red;
+  font-family: "Instrument Serif", serif;
+  font-weight: 900;
+
+
+  display: inline-block;
+}

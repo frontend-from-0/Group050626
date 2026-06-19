@@ -13,6 +13,9 @@ https://developer.mozilla.org/en-US/docs/Web/CSS/box-sizing?authuser=0
 
 ## Inline, block, inline block elements
 
+If not sure what type element is, try adding margin top or margin bottom. If margin works, it's block or inline-block. If margin does not work - it's inline element.
+Block level elements will cover entire width of the parent element. Inline-block elements will try to fit on the same line (if possible).
+
 ## Fonts 
 https://fonts.google.com/
 
@@ -27,11 +30,6 @@ Truncate long text with elipsis: https://css-tricks.com/snippets/css/truncate-st
 These units are fixed and do not change based on screen size or user settings.
 
 * `px` – Pixels (the only one from the list that is used for Web)
-* `cm` – Centimeters
-* `mm` – Millimeters
-* `in` – Inches
-* `pt` – Points (1 pt = 1/72 inch)
-* `pc` – Picas (1 pc = 12 pt)
 
 Use absolute units when you need precise physical measurements, like for print layouts.
 
@@ -43,11 +41,6 @@ These units scale based on other values, such as font size or viewport dimension
 
 * `em` – Relative to the font-size of the parent
 * `rem` – Relative to the font-size of the root element (`html`)
-* `%` – Relative to the size of the parent element
-
-We don't really use units below:
-* `ex` – Relative to the x-height of the font (typically the height of "x")
-* `ch` – Relative to the width of the "0" character in the current font
 
 ### Viewport-relative units
 * `%` – Relative to the size of the parent element
@@ -64,8 +57,8 @@ Relative units are best for responsive design and accessibility.
 * HEX & HEXA (#RRGGBB & #RRGGBBAA) - #000 #000000 both are black color (mostly used in frontend development)
 
 
-* RGB - rgb(0, 230, 0)
-* RGBA - rgba(0,0,0,0.4) the last number is for opacity (transparency)
+* RGB - rgb(130, 210, 32)
+* RGBA - rgba(119, 23, 97, 0.7) the last number is for opacity (transparency)
 
 * HSL & HSLA (HUE - SATURATION - LIGHTNESS)
 
