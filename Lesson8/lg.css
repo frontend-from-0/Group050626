@@ -1,0 +1,23 @@
+body {
+  padding: 0 64px;
+}
+
+.nav-list {
+  display: flex;
+}
+
+.nav-actions {
+  display: flex;
+}
+
+.nav-top {
+
+  flex-direction: row;
+}
+
+.nav-hamburger {
+  display: none;
+}
+.hero{
+  flex-direction: row;
+}

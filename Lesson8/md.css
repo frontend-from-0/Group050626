@@ -1,0 +1,11 @@
+body {
+  padding: 0 64px;
+}
+
+.nav-actions {
+  display: flex;
+}
+
+.nav-top {
+  flex-direction: row;
+}

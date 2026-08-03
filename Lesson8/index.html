@@ -5,8 +5,102 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Responsive design</title>
     <link rel="stylesheet" href="./styles.css" />
+    <link
+      rel="stylesheet"
+      href="./md.css"
+      media="all and (min-width: 768px) and (max-width: 1023.98px)"
+    />
+    <link
+      rel="stylesheet"
+      href="./lg.css"
+      media="all and (min-width: 1024px)"
+    />
   </head>
   <body>
+    <!-- 
+
+    SM
+    logo
+    hamburger
     
+    MD
+    hamburger
+    logo
+    login/singup
+
+    LG
+    logo
+    nav menu
+    login/singup
+
+
+    Nav elmentleri: 
+    hamburger (hidden on lg)
+    logo
+    nav menu (hidden on SM and MD)
+    login/singup (hidden on SM)
+    
+
+    Hero elementleri:
+
+    hero text
+    hero image
+    -->
+    <nav class="nav-top">
+      <button aria-label="hamburger-menu" class="nav-hamburger">
+        <img src="./assets/icons/hamburger.svg" alt="" aria-hidden="true" />
+      </button>
+      <a href="#" class="nav-logo"
+        ><img src="./assets/logo.svg" alt="Travlog logo"
+      /></a>
+      <ul class="nav-list">
+        <li class="nav-list-item"><a href="#" class="nav-link">Home</a></li>
+        <li class="nav-list-item"><a href="#" class="nav-link">Discover</a></li>
+        <li class="nav-list-item">
+          <a href="#" class="nav-link">Special deals</a>
+        </li>
+        <li class="nav-list-item"><a href="#" class="nav-link">Contact</a></li>
+      </ul>
+      <div class="nav-actions">
+        <a href="#" class="btn btn-ghost">Log In</a>
+        <a href="#" class="btn btn-primary">Sign Up</a>
+      </div>
+    </nav>
+    <main>
+      <section class="hero">
+        <div>
+          <div class="chip">
+            <span>Explore the world!</span>
+            <img
+              class="icon"
+              src="./assets/icons/briefcase.svg"
+              alt="briefcase icon"
+              aria-hidden="true"
+            />
+          </div>
+
+          <h1>Travel top destination of the world</h1>
+          <p>
+            We always make our customer happy by providing as many choices as
+            possible
+          </p>
+          <div>
+            <a href="">Get Started</a>
+            <button href="">
+              <img class="icon" src="./assets/icons/play.svg" alt="" />Watch
+              Demo
+            </button>
+          </div>
+        </div>
+
+        <div>
+          <img
+            src="./assets/hero-md.png"
+            srcset="./assets/hero-sm.webp, ./assets/hero-md.webp"
+            alt="Travel collage (TO BE UPDATED)"
+          />
+        </div>
+      </section>
+    </main>
   </body>
 </html>
