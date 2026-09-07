@@ -7,21 +7,79 @@
    - Call the function with different passwords and log the result.
 */
 
+function checkPassword(password) {
+  if (typeof password !== 'string') {
+    console.log(
+      'Provided type of the input is incorrect when calling checkPassword function. Please provide a string and try again.',
+    );
+    return;
+  }
+
+  if (password.length >= 8) {
+    console.log('Password length is sufficient.');
+  } else {
+    console.log('Password is too short.');
+  }
+}
+console.log('Ex. 1. ---------------');
+checkPassword('1234');
+checkPassword('123456789');
+checkPassword(123456789);
+
+console.log('-----------------------');
 
 /*
+
+
 2. Uppercase Name
    - Define a function `uppercaseName(name)` that converts a given name to uppercase.
    - Log the uppercase result to the console.
    - Example: "John Doe" -> "JOHN DOE"
 */
+function uppercaseName(name) {
+  if (typeof name !== 'string') {
+    console.log(
+      'Provided type of the input is incorrect when calling uppercaseName function. Please provide a string and try again.',
+    );
+    return;
+  }
 
+  const uppercaseName = name.toUpperCase();
+  console.log(uppercaseName);
+}
 
+console.log('Ex. 2. ---------------');
+uppercaseName('name');
+uppercaseName('Jane');
+uppercaseName('Tom');
+
+uppercaseName(1231421);
+
+console.log('-----------------------');
 /*
 3. Lowercase Email
    - Define a function `normalizeEmail(email)` that returns a lowercased version of the email.
    - Log the normalized email to the console.
    - Example: "USER@Example.COM" -> "user@example.com"
 */
+
+function normalizeEmail(email) {
+  if (typeof email !== 'string') {
+    console.log(
+      'Provided type of the input is incorrect when calling normalizeEmail function. Please provide a string and try again.',
+    );
+    return;
+  }
+
+  const lowerCaseEmail = email.toLowerCase();
+
+  console.log(lowerCaseEmail);
+}
+console.log('Ex. 3. ---------------');
+
+normalizeEmail('YIGIT@HOTMail.com');
+normalizeEmail(15151);
+console.log('-----------------------');
 
 /*
 4. Extract Domain
@@ -30,7 +88,32 @@
    - Log the domain to the console.
    - Example: "user@example.com" -> "example.com"
 */
+function getDomain(email) {
+  if (typeof email !== 'string') {
+    console.log(
+      'Provided type of the input is incorrect when calling getDomain function. Please provide a string and try again.',
+    );
+    return;
+  }
 
+  const index = email.indexOf('@');
+
+  if (index === -1) {
+    console.log(
+      'Provided input is not a correct email address, corrent the input and try again.',
+    );
+    return;
+  }
+
+  const domain = email.slice(index + 1);
+  console.log(domain);
+}
+
+console.log('Ex. 4. ---------------');
+getDomain('jane.doe@gmail.com');
+getDomain('asya@gmail.com');
+getDomain('doejhonon.dance');
+console.log('-----------------------');
 
 /*
 5. Check Substring
@@ -39,6 +122,38 @@
    - If true, log: "<word> found in sentence."
    - Else, log: "<word> not found in sentence."
 */
+function containsWord(sentence, word) {
+  if (typeof sentence !== 'string' || typeof word !== 'string') {
+    console.log(
+      'Provided type of the input is incorrect when calling containsWord function. Please provide a string for both input values and try again.',
+    );
+    return;
+  }
+
+  const isFound = sentence.includes(word);
+  if (isFound) {
+    console.log('\"' + word + '\"' + ' found in sentence');
+  } else {
+    console.log(`\"${word}\" not found in sentence`);
+  }
+}
+
+console.log('Ex. 5. ---------------');
+
+containsWord(
+  'Provided type of the input is incorrect when calling containsWord function.',
+  'type',
+);
+containsWord(
+  'Provided type of the input is incorrect when calling containsWord function. Please provide a string for both input values and try again.',
+  'hello',
+);
+
+containsWord(
+  'Provided type of the input is incorrect when calling containsWord function.',
+);
+
+console.log('-----------------------');
 
 /*
 6. File Extension Check
@@ -47,6 +162,28 @@
    - If it does, log: "This is a PDF file."
    - Otherwise, log: "Not a PDF file."
 */
+
+function checkFileExtension(filename) {
+  if (typeof filename !== 'string') {
+    console.log(
+      'Provided type of the input is incorrect when calling checkFileExtension function. Please provide a string and try again.',
+    );
+    return;
+  }
+
+  const formatChecker = filename.toLowerCase().endsWith('.pdf');
+
+  if (formatChecker) {
+    console.log('This is a PDF file.');
+  } else {
+    console.log('Not a PDF file.');
+  }
+}
+
+checkFileExtension('notes.pdf');
+checkFileExtension('notes.html');
+checkFileExtension('notes.PDF');
+checkFileExtension();
 
 /*
 7. Compare Numbers (if-else)
@@ -95,7 +232,6 @@
      7 -> "Sunday"
      - Log the matched day or "Invalid day" if out of range.
 */
-
 
 // value == value
 /// value and type === value and type
