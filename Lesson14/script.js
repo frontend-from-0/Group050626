@@ -5,12 +5,55 @@
    - Log the final sum.
 */
 
+function sumArray(numbers) {
+  if (!Array.isArray(numbers)) {
+    return 'Incorrect input type in the sumArray function. Expected input type is array.';
+  }
+  let sum = 0;
+
+  for (let i = 0; i < numbers.length; i++) {
+    sum += numbers[i];
+
+    // numbers[i] - square bracket notation
+  }
+  return sum;
+}
+
+const exampleArray = [1, 2, 3, 4, 5];
+const exampleArray2 = Array(1, 2, 3, 4, 5, 5);
+console.log('EX. 1. ------------');
+console.log(sumArray(exampleArray));
+console.log(sumArray(exampleArray2));
+console.log(sumArray());
+
 /*
 2. Find Maximum Number in an Array
    - Define a function `findMax(numbers)` that uses a for loop to iterate
      through an array and find the largest value.
    - Log the largest value.
 */
+function findMax(numbers) {
+  if (!Array.isArray(numbers)) {
+    console.log(
+      'Incorrect input type in the findMax function. Expected input type is array.',
+    );
+    return;
+  }
+  let max = numbers[0];
+
+  for (let i = 1; i < numbers.length; i++) {
+    if (max < numbers[i]) {
+      max = numbers[i];
+    }
+  }
+  console.log('max is ' + max);
+}
+
+// [1, 2, 3, 4, 5]
+
+console.log('EX. 2. ------------');
+findMax();
+findMax([123, 1312, 122, 0]);
 
 /*
 3. Count Odd and Even Numbers
@@ -18,6 +61,27 @@
      of numbers and counts how many are odd and how many are even.
    - Log the counts in the format: "Odd: X, Even: Y"
 */
+function countOddEven(numbers) {
+  if (!Array.isArray(numbers)) {
+    console.log(
+      'Incorrect input type in the countOddEven function. Expected input type is array.',
+    );
+    return;
+  }
+  let oddCount = 0;
+  let evenCount = 0;
+  for (let i = 0; i < numbers.length; i++) {
+    if (numbers[i] % 2 === 0) {
+      evenCount += 1;
+    } else {
+      oddCount += 1;
+    }
+  }
+  console.log(`Odd: ${oddCount}, Even: ${evenCount}`);
+}
+countOddEven(exampleArray);
+countOddEven([]);
+countOddEven('1, 2, 3');
 
 /*
 4. Sum of Numbers in a Range (While Loop)
@@ -25,6 +89,38 @@
      to sum all integers from `start` to `end` (inclusive).
    - Log the final sum.
 */
+function sumRange(start, end) {
+  if (typeof start !== 'number' || typeof end !== 'number') {
+    console.error(
+      'Incorrect input type for function sumRange. Expected start and end range in number format.',
+    );
+    return;
+  }
+  let sum = 0;
+
+  if (start < end) {
+    let i = start;
+    while (i <= end) {
+      sum += i;
+      i++;
+    }
+  } else if (start > end) {
+    let i = end;
+    while (i <= start) {
+      sum += i;
+      i++;
+    }
+  } else if (start === end) {
+    sum = start;
+  }
+
+  console.log(`final sum of the range \'${start} - ${end}\'`, sum);
+}
+
+sumRange(1, 3);
+sumRange('1', '3');
+sumRange(3, 1);
+sumRange(1, 1);
 
 /*
 5. Reverse an Array
@@ -33,12 +129,49 @@
    - Log the reversed array.
 */
 
+function reverseArray(arr) {
+  if (!Array.isArray(arr)) {
+    console.log(
+      'Incorrect input type in the reverseArray function. Expected input type is array.',
+    );
+    return;
+  }
+  const reversed = [];
+  const indexOfLastElement = arr.length - 1;
+  for (let i = indexOfLastElement; i >= 0; i--) {
+    reversed.push(arr[i]);
+  }
+  console.log(reversed);
+}
+
+reverseArray(exampleArray);
+reverseArray();
+
 /*
 6. Filter Out Negative Numbers
    - Define a function `filterNegative(numbers)` that loops through
      an array of numbers and creates a new array without any negative values.
    - Log the new array.
 */
+function filterNegativeNumbers(array) {
+  if (!Array.isArray(array)) {
+    console.log(
+      'Incorrect input type in the filterNegativeNumbers function. Expected input type is array.',
+    );
+    return;
+  }
+  let newArray = [];
+
+  for (let i = 0; i < array.length; i++) {
+    if (array[i] >= 0) {
+      newArray.push(array[i]);
+    }
+  }
+
+  console.log(newArray);
+}
+filterNegativeNumbers([0, -1, -1, -1, 2, 3]);
+filterNegativeNumbers([]);
 
 /*
 7. Double the Values (For-of Loop)
@@ -46,6 +179,27 @@
      to multiply each number by 2, storing results in a new array.
    - Log the new array.
 */
+function doubleValues(numbers) {
+  if (!Array.isArray(numbers)) {
+    console.log(
+      'Incorrect input type in the doubleValues function. Expected input type is array.',
+    );
+    return;
+  }
+  let doublearray = [];
+  for (const number of numbers) {
+    if (typeof number !== 'number') {
+      console.log(
+        'Incorrect input type in the doubleValues function. Expected input type is array of numbers.',
+      );
+      return;
+    }
+    doublearray.push(number * 2);
+  }
+  console.log(doublearray);
+}
+doubleValues(exampleArray);
+doubleValues([1, 2, 3, '4']);
 
 /*
 8. Print Each Character of a String (For-of)

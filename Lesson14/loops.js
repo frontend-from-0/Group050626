@@ -46,3 +46,13 @@ const colors = ['red', 'green', 'blue'];
 for (const color of colors) {
     console.log(color);
 }
+
+// from start to end of the array
+for (let index = 0; index < colors.length; index++) {
+    console.log(colors[index]);
+}
+// from end to start of the array
+
+for (let index = colors.length - 1; index >= 0; index--) {
+    console.log(colors[index]);
+}
