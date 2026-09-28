@@ -28,6 +28,69 @@ Node.js or a browser console.
 3. Add a `viewCart` method to display all items in the cart.
 */
 
+
+
+// PascalCase should be used to name classes
+
+class ShoppingCart {
+  #items;
+
+  constructor() {
+    this.#items = [
+      {
+        id: Date.now(),
+        name: 'Laptop',
+        quantity: 10,
+        price: {
+          amount: 1000,
+          currency: 'USD',
+        },
+      },
+    ];
+  }
+
+  viewCart() {
+    console.log('------- Viewing the cart -------');
+    if (this.#items.length > 0) {
+      for (let i = 0; i < this.#items.length; i++) {
+        const currentItem = this.#items[i];
+        console.log(
+          `Cart item ${currentItem.id}: Name ${currentItem.name} Quantity ${currentItem.quantity} Price ${currentItem.price.amount} ${currentItem.price.currency}`,
+        );
+      }
+    } else {
+      console.log('Cart is empty');
+    }
+
+    console.log('--------------');
+  }
+
+  addItem(name, quantity, price) {
+    for (let i = 0; i < this.#items.length; i++) {
+      const currentItem = this.#items[i];
+
+      if (currentItem.name === name) {
+        currentItem.quantity += quantity;
+        return currentItem;
+      }
+    }
+    this.#items.push({
+      id: Date.now(),
+      name,
+      quantity,
+      price,
+    });
+  }
+}
+
+
+const shoppingCart1 = new ShoppingCart();
+
+shoppingCart1.viewCart();
+shoppingCart1.addItem('Iphone', 100, { amount: 100000, currency: 'USD' });
+shoppingCart1.addItem('Laptop', 5, {amount: 1000, currency: 'USD'});
+shoppingCart1.viewCart();
+
 /*
 -----------------------------------------------------------
   STEP 2: Add Items to the Cart
@@ -71,5 +134,6 @@ Node.js or a browser console.
      code is valid.
 3. Use an object to store discount codes and their values.
 */
+
 
 
