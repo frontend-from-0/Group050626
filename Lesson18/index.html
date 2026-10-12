@@ -12,7 +12,7 @@
         <h1>Book an Appointment</h1>
       </header>
 
-      <form class="booking">
+      <form class="booking" id="booking-form">
         <section class="calendar">
           <label for="date">Select a date</label>
           <input type="date" id="date" />
@@ -31,9 +31,17 @@
           <h2>Your Appointment</h2>
           <p>Date: <span id="selected-date">-</span></p>
           <p>Time: <span id="selected-time">-</span></p>
-          <button id="confirm">Confirm Booking</button>
+          <button id="confirm" disabled>Confirm Booking</button>
         </aside>
       </form>
+
+      <div class="hidden" id="confirmation-msg">
+        <h2>Your booking is confirmed!</h2>
+      </div>
+      <div class="hidden" id="error-msg">
+        <h2>An error occured! Please try again. </h2>
+      </div>
+
     </div>
 
     <script src="script.js"></script>

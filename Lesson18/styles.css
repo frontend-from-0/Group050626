@@ -92,6 +92,10 @@ fieldset {
 #confirm:hover {
   background-color: #005fa3;
 }
+#confirm:disabled {
+  background-color: #7a7c7e;
+  cursor: default;
+}
 
 .hidden {
   display: none;
