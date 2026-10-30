@@ -4,7 +4,7 @@
     <link
       rel="stylesheet"
       as="style"
-      onload="this.rel='stylesheet'"
+      onload="this.rel = 'stylesheet'"
       href="https://fonts.googleapis.com/css2?display=swap&amp;family=Noto+Sans%3Awght%40400%3B500%3B700%3B900&amp;family=Plus+Jakarta+Sans%3Awght%40400%3B500%3B700%3B800"
     />
 
@@ -60,7 +60,8 @@
                   Crisp and juicy organic apples.
                 </p>
               </div>
-              <button id="apples_add"
+              <button
+                id="apples_add"
                 class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-8 px-4 flex-row-reverse bg-[#f3e7e8] text-[#1b0e0f] text-sm font-medium leading-normal w-fit"
               >
                 Add to Cart
@@ -85,7 +86,8 @@
                   Perfectly ripe fresh bananas.
                 </p>
               </div>
-              <button id="bananas_add"
+              <button
+                id="bananas_add"
                 class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-8 px-4 flex-row-reverse bg-[#f3e7e8] text-[#1b0e0f] text-sm font-medium leading-normal w-fit"
               >
                 Add to Cart
@@ -110,7 +112,8 @@
                   Healthy whole wheat bread.
                 </p>
               </div>
-              <button id="bread_add"
+              <button
+                id="bread_add"
                 class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-8 px-4 flex-row-reverse bg-[#f3e7e8] text-[#1b0e0f] text-sm font-medium leading-normal w-fit"
               >
                 Add to Cart
@@ -135,7 +138,8 @@
                   Farm-fresh free-range eggs.
                 </p>
               </div>
-              <button id='eggs_add'
+              <button
+                id="eggs_add"
                 class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-8 px-4 flex-row-reverse bg-[#f3e7e8] text-[#1b0e0f] text-sm font-medium leading-normal w-fit"
               >
                 Add to Cart
@@ -158,7 +162,7 @@
           id="apples_cart"
           class="flex items-center gap-4 bg-[#fcf8f8] px-4 min-h-[72px] py-2 justify-between"
         >
-          <div  class="flex items-center gap-4">
+          <div class="flex items-center gap-4">
             <div
               class="bg-center bg-no-repeat aspect-square bg-cover rounded-lg size-14"
               style="
@@ -171,22 +175,38 @@
               >
                 Organic Apples
               </p>
-              <p
-                class="text-[#974e52] text-sm font-normal leading-normal line-clamp-2"
-              >
-                Quantity: <span id="apples_quantity">1</span> 
-              </p>
+              <div class="flex items-center">
+                <span
+                  class="text-[#974e52] text-sm font-normal leading-normal line-clamp-2"
+                  >Quantity:</span
+                >
+                <button
+                  id="apples_decrement"
+                  class="bg-[#f3e7e8] px-1 m-2 rounded cursor-pointer disabled:bg-gray-200 disabled:cursor-not-allowed text-sm font-medium"
+                >
+                  -
+                </button>
+                <span id="apples_quantity">1</span
+                ><button
+                  id="apples_increment"
+                  class="bg-[#f3e7e8] px-1 m-2 rounded cursor-pointer disabled:bg-gray-200 disabled:cursor-not-allowed text-sm font-medium"
+                >
+                  +
+                </button>
+              </div>
             </div>
           </div>
           <div class="shrink-0">
-            <button id="apples_remove"
-              class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-8 px-4 bg-[#f3e7e8] text-[#1b0e0f] text-sm font-medium leading-normal w-fit"
+            <button
+              id="apples_remove"
+              class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-8 px-4 bg-[#f3e7e8] text-[#1b0e0f] text-sm font-medium leading-normal w-fit disabled:bg-gray-200 disabled:cursor-not-allowed"
             >
               Remove
             </button>
           </div>
         </div>
-        <div id="bananas_cart"
+        <div
+          id="bananas_cart"
           class="flex items-center gap-4 bg-[#fcf8f8] px-4 min-h-[72px] py-2 justify-between"
         >
           <div class="flex items-center gap-4">
@@ -202,22 +222,38 @@
               >
                 Fresh Bananas
               </p>
-              <p
-                class="text-[#974e52] text-sm font-normal leading-normal line-clamp-2"
-              >
-                Quantity: <span id="bananas_quantity">2</span>
-              </p>
+              <div class="flex items-center">
+                <span
+                  class="text-[#974e52] text-sm font-normal leading-normal line-clamp-2"
+                  >Quantity:</span
+                >
+                <button
+                  id="bananas_decrement"
+                  class="bg-[#f3e7e8] px-1 m-2 rounded cursor-pointer disabled:bg-gray-200 disabled:cursor-not-allowed text-sm font-medium"
+                >
+                  -
+                </button>
+                <span id="bananas_quantity">1</span
+                ><button
+                  id="bananas_increment"
+                  class="bg-[#f3e7e8] px-1 m-2 rounded cursor-pointer disabled:bg-gray-200 disabled:cursor-not-allowed text-sm font-medium"
+                >
+                  +
+                </button>
+              </div>
             </div>
           </div>
           <div class="shrink-0">
-            <button id="bananas_remove"
-              class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-8 px-4 bg-[#f3e7e8] text-[#1b0e0f] text-sm font-medium leading-normal w-fit"
+            <button
+              id="bananas_remove"
+              class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-8 px-4 bg-[#f3e7e8] text-[#1b0e0f] text-sm font-medium leading-normal w-fit disabled:bg-gray-200 disabled:cursor-not-allowed"
             >
               Remove
             </button>
           </div>
         </div>
-        <div id="bread_cart"
+        <div
+          id="bread_cart"
           class="flex items-center gap-4 bg-[#fcf8f8] px-4 min-h-[72px] py-2 justify-between"
         >
           <div class="flex items-center gap-4">
@@ -233,22 +269,38 @@
               >
                 Whole Wheat Bread
               </p>
-              <p
-                class="text-[#974e52] text-sm font-normal leading-normal line-clamp-2"
-              >
-                Quantity: <span id="bread_quantity">1</span>
-              </p>
+              <div class="flex items-center">
+                <span
+                  class="text-[#974e52] text-sm font-normal leading-normal line-clamp-2"
+                  >Quantity:</span
+                >
+                <button
+                  id="bread_decrement"
+                  class="bg-[#f3e7e8] px-1 m-2 rounded cursor-pointer disabled:bg-gray-200 disabled:cursor-not-allowed text-sm font-medium"
+                >
+                  -
+                </button>
+                <span id="bread_quantity">1</span
+                ><button
+                  id="bread_increment"
+                  class="bg-[#f3e7e8] px-1 m-2 rounded cursor-pointer disabled:bg-gray-200 disabled:cursor-not-allowed text-sm font-medium"
+                >
+                  +
+                </button>
+              </div>
             </div>
           </div>
           <div class="shrink-0">
-            <button id="bread_remove"
-              class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-8 px-4 bg-[#f3e7e8] text-[#1b0e0f] text-sm font-medium leading-normal w-fit"
+            <button
+              id="bread_remove"
+              class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-8 px-4 bg-[#f3e7e8] text-[#1b0e0f] text-sm font-medium leading-normal w-fit disabled:bg-gray-200 disabled:cursor-not-allowed"
             >
               Remove
             </button>
           </div>
         </div>
-        <div id="eggs_cart"
+        <div
+          id="eggs_cart"
           class="flex items-center gap-4 bg-[#fcf8f8] px-4 min-h-[72px] py-2 justify-between"
         >
           <div class="flex items-center gap-4">
@@ -264,16 +316,31 @@
               >
                 Free-Range Eggs
               </p>
-              <p
-                class="text-[#974e52] text-sm font-normal leading-normal line-clamp-2"
-              >
-                Quantity: <span id="eggs_quantity">1</span>
-              </p>
+              <div class="flex items-center">
+                <span
+                  class="text-[#974e52] text-sm font-normal leading-normal line-clamp-2"
+                  >Quantity:</span
+                >
+                <button
+                  id="eggs_decrement"
+                  class="bg-[#f3e7e8] px-1 m-2 rounded cursor-pointer disabled:bg-gray-200 disabled:cursor-not-allowed text-sm font-medium"
+                >
+                  -
+                </button>
+                <span id="eggs_quantity">1</span
+                ><button
+                  id="eggs_increment"
+                  class="bg-[#f3e7e8] px-1 m-2 rounded cursor-pointer disabled:bg-gray-200 disabled:cursor-not-allowed text-sm font-medium"
+                >
+                  +
+                </button>
+              </div>
             </div>
           </div>
           <div class="shrink-0">
-            <button id="eggs_remove"
-              class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-8 px-4 bg-[#f3e7e8] text-[#1b0e0f] text-sm font-medium leading-normal w-fit"
+            <button
+              id="eggs_remove"
+              class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-8 px-4 bg-[#f3e7e8] text-[#1b0e0f] text-sm font-medium leading-normal w-fit disabled:bg-gray-200 disabled:cursor-not-allowed"
             >
               Remove
             </button>
@@ -282,12 +349,13 @@
         <p
           class="text-[#974e52] text-sm font-normal leading-normal pb-3 pt-1 px-4"
         >
-          Total Price: $25
+          Total Price: $<span id="total_price">0</span>
         </p>
         <div class="flex px-4 py-3 justify-end">
           <button
             class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-10 px-4 bg-[#f3e7e8] text-[#1b0e0f] text-sm font-bold leading-normal tracking-[0.015em]"
-          >Clear Cart
+          >
+            Clear Cart
           </button>
         </div>
       </main>
