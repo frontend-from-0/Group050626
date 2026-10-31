@@ -1,0 +1,27 @@
+{
+  "data": [
+    {
+      "id": 0,
+      "name": "John",
+      "surname": "Doe",
+      "isStudent": true,
+      "studies": ["HTML", "CSS", "JS"],
+      "address": {
+        "street": "Kungsgatan 1",
+        "city": "Gothenburg",
+        "postalCode": "41117"
+      }
+    },
+    {
+      "id": 1,
+      "name": "Jane",
+      "surname": "Doe",
+      "isStudent": false,
+      "address": {
+        "street": "Kungsgatan 1",
+        "city": "Gothenburg",
+        "postalCode": "41117"
+      }
+    }
+  ]
+}
