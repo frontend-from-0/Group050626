@@ -1,0 +1,28 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Create user</title>
+    <link rel="stylesheet" type="text/css" href="../styles.css" />
+  </head>
+  <body>
+    <nav>
+      <a href="../index.html" class="button">Back to users</a>
+    </nav>
+    <main>
+      <form method="POST" id="createUserForm">
+        <label for="firstName">First name</label>
+        <input type="text" id="firstName" name="firstName" required />
+
+        <label for="lastName">Last name</label>
+        <input type="text" id="lastName" name="lastName" required />
+
+        <button type="submit" class="button button--success">Create user</button>
+      </form>
+      <div>
+        <p class="hidden" id="statusMessage"></p>
+      </div>
+    </main>
+
+    <script src="./create.js"></script>
+  </body>
+</html>
