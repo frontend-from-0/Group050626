@@ -59,7 +59,7 @@ console.log('Promise created. Waiting for it to resolve or reject...');
 // Examples of making a function asyncronous
 // Function declaration
 async function getData() {
-  const res = await fetch('some url');
+  const res = await fetch('https://domain.com/users/');
   const data = await res.json();
   // ... the rest of the code
 }
